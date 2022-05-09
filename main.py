@@ -2,17 +2,20 @@
 
 from src.analytics import *
 from src.read_data import *
+from src.read_config import read_config
 
-filename = 'sample.txt'
-directory = 'raw_data'
-count_col='count'
-timestamp_col = 'timestamp'
+config = read_config('config.yaml')
+
+filename = config['vehicle_counter']['filename']
+directory = config['vehicle_counter']['directory']
+count_col= config['vehicle_counter']['count_col']
+timestamp_col = config['vehicle_counter']['timestamp_col']
 
 data = read_file(directory, filename)
 processed_data = process_input(data)
 data_frame = convert_dataframe(processed_data, 'timestamp', 'count')
 
-print(total_cars(data_frame, count_col))
-print(total_cars_in_each_day(data_frame,timestamp_col))
-print(top_three_hours(data_frame,timestamp_col , count_col))
-print(least_three_half_hours(data_frame, timestamp_col, count_col))
+print('\n1. The number of cars seen in total =',total_cars(data_frame, count_col))
+print("\n2. A sequence of lines where each line contains a date (in yyyy-mm-dd format) and the number of cars seen on that day (eg. 2016-11-23 289) for all days listed in the input file.\n",total_cars_in_each_day(data_frame,timestamp_col))
+print("\n3. The top 3 half hours with most cars, in the same format as the input file \n",top_three_hours(data_frame,timestamp_col , count_col))
+print("\n4. The 1.5 hour period with least cars (i.e. 3 contiguous half hour records)\n",least_three_half_hours(data_frame, timestamp_col, count_col))
