@@ -1,0 +1,9 @@
+10:12:07,804 root INFO Running Urban Planning
+10:12:07,806 root INFO Tetsing total car count with sample data
+10:12:07,806 root INFO Test 1 passed
+10:12:07,806 root INFO Tetsing total car count each day
+10:12:07,808 root INFO Test 2 passed
+10:12:07,808 root INFO Tetsing top 3 hours
+10:12:07,812 root INFO Test 3 passed
+10:12:07,812 root INFO Tetsing least 3 half hour periods - 3 contiguous half hour records
+10:12:07,819 root INFO Test 4 passed
