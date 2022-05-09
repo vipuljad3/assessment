@@ -4,7 +4,7 @@ from src.analytics import *
 from src.read_data import *
 
 filename = 'sample.txt'
-directory = '/home/vipuljad/assessment/raw_data/'
+directory = 'raw_data'
 count_col='count'
 timestamp_col = 'timestamp'
 
