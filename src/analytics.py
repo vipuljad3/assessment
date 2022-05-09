@@ -4,13 +4,14 @@ def total_cars(df, count_col):
     return df[count_col].sum()
 
 def total_cars_in_each_day(df, timestamp_col):
-    df['date'] = pd.DatetimeIndex(df[timestamp_col]).normalize()
+    df['date'] = pd.DatetimeIndex(df[timestamp_col]).normalize() 
     return df.groupby('date').sum().reset_index()
 
 def top_three_hours(df, timestamp_col, count_col):
     df['delta'] = (df[timestamp_col]-df[timestamp_col].shift()).dt.total_seconds()
     df = df[df.delta == 1800]
-    return df.nlargest(3, count_col)[[timestamp_col,count_col]].reset_index()
+    df = df.nlargest(3, count_col).reset_index() 
+    return df[[timestamp_col,count_col]]
 
 def index_in_list(a_list, index):
     return (index < len(a_list))

@@ -1,0 +1,5 @@
+vehicle_counter:
+  filename : 'sample.txt'
+  directory : 'raw_data'
+  count_col : 'count'
+  timestamp_col : 'timestamp'
