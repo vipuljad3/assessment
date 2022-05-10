@@ -1,9 +1,19 @@
-10:12:07,804 root INFO Running Urban Planning
-10:12:07,806 root INFO Tetsing total car count with sample data
-10:12:07,806 root INFO Test 1 passed
-10:12:07,806 root INFO Tetsing total car count each day
-10:12:07,808 root INFO Test 2 passed
-10:12:07,808 root INFO Tetsing top 3 hours
-10:12:07,812 root INFO Test 3 passed
-10:12:07,812 root INFO Tetsing least 3 half hour periods - 3 contiguous half hour records
-10:12:07,819 root INFO Test 4 passed
+10:47:08,137 root INFO Running TESTS
+10:47:08,145 root INFO Tetsing total car count with sample data
+10:47:08,145 root INFO Test 1 passed
+10:47:08,145 root INFO Tetsing total car count each day
+10:47:08,147 root INFO Test 2 passed
+10:47:08,147 root INFO Tetsing top 3 hours
+10:47:08,149 root INFO Test 3 passed
+10:47:08,149 root INFO Tetsing least 3 half hour periods - 3 contiguous half hour records
+10:47:08,178 root INFO Test 4 passed
+10:47:51,717 root INFO Running TESTS
+10:47:51,726 root INFO Tetsing total car count with sample data
+10:47:51,726 root INFO Test 1 passed
+10:47:51,726 root INFO Tetsing total car count each day
+10:47:51,728 root INFO Test 2 passed
+10:47:51,728 root INFO Tetsing top 3 hours
+10:47:51,731 root INFO Test 3 passed
+10:47:51,731 root INFO Tetsing least 3 half hour periods - 3 contiguous half hour records
+10:47:51,761 root INFO Test 4 passed
+10:47:51,761 root INFO All Tests passed
