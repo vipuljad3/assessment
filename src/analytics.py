@@ -1,5 +1,5 @@
 from src.read_data import *
-
+from datetime import datetime
 
 ## Returns sum of all the count in the file.
 def total_cars(df, count_col):
@@ -7,13 +7,14 @@ def total_cars(df, count_col):
 
 ## Groups data by date and returns the sum of cars for each day.
 def total_cars_in_each_day(df, timestamp_col):
-    df['date'] = pd.DatetimeIndex(df[timestamp_col]).normalize() 
+    df['date'] = pd.to_datetime(df[timestamp_col]).dt.date
     return df.groupby('date').sum().reset_index()
 
 ## Subsets the data to filter out times with 30 minute differences and returns the top three largest count for 30 minute times.
 def top_three_hours(df, timestamp_col, count_col):
+    df[str(timestamp_col+'_temp')] = df[timestamp_col].apply(lambda x: datetime.strftime(x, '%Y-%m-%dT%H:%M:%S'))  
     df = df.nlargest(3, count_col).reset_index()\
-            [[timestamp_col,count_col]] 
+            [[str(timestamp_col+'_temp'),count_col]] 
     return df
 
 
