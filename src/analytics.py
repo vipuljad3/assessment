@@ -23,7 +23,7 @@ def index_in_list(a_list, index):
 
 
 
-## Iterates over each day and calculates top 3 consecutive times if they fall within the range on 90 minutes. 
+## Iterates over each dataframe calculates top 3 consecutive times if they fall within the range on 90 minutes. 
 def least_three_half_hours(df, timestamp_col, count_col):
     df['date_'] = pd.to_datetime(df[timestamp_col]).dt.date
     df['time_'] = pd.to_datetime(df[timestamp_col]).dt.time
