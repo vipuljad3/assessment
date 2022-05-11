@@ -1,4 +1,4 @@
-# assessment
+# SEEK Assessment AIPS
 ## Steps to run the program
 ### 1. Install docker (debian - apt install docker, fedora/centos/RHEL - yum install docker)
 ### 2. git clone this repository
