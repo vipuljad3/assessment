@@ -21,7 +21,7 @@ def convert_dataframe(data, timestamp_col, count_col):
     df[count_col] = df[count_col].astype('int') 
     return df
 
-
+### Ideally used to perform tests on test data where there are missing timestamp values, Assuming that the missing timestamp counts are 0.
 def fill_missing_times(df, timestamp_col, count_col):
     df['times'] = df[timestamp_col]
     dates  = list(set(pd.to_datetime(df[timestamp_col]).dt.date))

@@ -10,7 +10,7 @@ def total_cars_in_each_day(df, timestamp_col):
     df['date'] = pd.to_datetime(df[timestamp_col]).dt.date
     return df.groupby('date').sum().reset_index()
 
-## Subsets the data to filter out times with 30 minute differences and returns the top three largest count for 30 minute times.
+## returns top three largest count for 30 minute times.
 def top_three_hours(df, timestamp_col, count_col):
     df[str(timestamp_col+'_temp')] = df[timestamp_col].apply(lambda x: datetime.strftime(x, '%Y-%m-%dT%H:%M:%S'))  
     df = df.nlargest(3, count_col).reset_index()\
@@ -18,7 +18,7 @@ def top_three_hours(df, timestamp_col, count_col):
     return df
 
 
-## Iterates over each dataframe calculates top 3 consecutive times if they fall within the range on 90 minutes. 
+## Iterates over the datafrane and sums up 3 consecutive previous records and print output based on the sum 
 def least_three_half_hours(df, timestamp_col, count_col):
     df['consecutive_count'] = df.rolling(3).sum()
     df['start_timestamp'] = df[timestamp_col] - pd.Timedelta(minutes=90)
@@ -29,7 +29,7 @@ def least_three_half_hours(df, timestamp_col, count_col):
                             [['start_timestamp', 'end_timestamp', 'consecutive_count']]
     return(df)
 
-
+## presents output in the desired format.
 def present_output(df):
     df = df.reset_index()
     for i in range(len(df)):
