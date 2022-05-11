@@ -2,7 +2,7 @@
 ## Steps to run the program
 ### 1. Install docker (debian - apt install docker, fedora/centos/RHEL - yum install docker)
 ### 2. git clone this repository
-####### git clone https://github.com/vipuljad3/assessment.git
+##### git clone https://github.com/vipuljad3/assessment.git
 ### 3. cd into the downloaded repository
 ### 4. $ sudo docker build -t assessment . 
 ![image](https://user-images.githubusercontent.com/17043489/167782851-f0c33e85-049a-4f73-9c8e-db4bd1e36f37.png)
