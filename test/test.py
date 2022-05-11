@@ -19,7 +19,6 @@ logging.info("Running TESTS")
 
 filename = 'sample.txt'
 directory = '/home/vipuljad/assessment/test/test_data/'
-count_col = 'count'
 count_col='count'
 timestamp_col = 'timestamp'
 
