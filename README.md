@@ -7,7 +7,7 @@
 ### 5. $ sudo sudo docker run assessment
 
 ## Input data assumptions.
-### Assuming that the input data is consistant as it is machine generated, We have assumed that the data provided in the sample can be assigned to 0 for the missing timestamp values.
+#### Assuming that the input data is consistant as it is machine generated, We have assumed that the data provided in the sample can be assigned to 0 for the missing timestamp values.
 
 ## Output for sample data provided.
 
@@ -17,3 +17,4 @@
 ### Test are locally performed in the test/ directory. with the sample data in test/test_data/ directory.
 ### change the path for raw data manually in the test.py code 
 #### for example : directory = '/home/vipuljad/assessment/test/test_data/'
+#### test logs and outputs are saved in test/test_log.log file.
